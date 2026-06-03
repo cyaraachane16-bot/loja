@@ -1,0 +1,356 @@
+/**
+ * Responsividade — mobile first
+ * Breakpoints: 480px (sm), 768px (md), 1024px (lg), 1280px (xl)
+ */
+
+/* ---- Cabeçalho mobile ---- */
+@media (max-width: 767px) {
+  .cyara-header__inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      'logo icons'
+      'search search';
+    gap: 0.5rem 0.75rem;
+    height: auto;
+    padding: 0.6rem 0.75rem;
+  }
+
+  .cyara-logo {
+    grid-area: logo;
+    font-size: 26px;
+    justify-self: start;
+  }
+
+  .cyara-search {
+    grid-area: search;
+    max-width: none;
+    width: 100%;
+  }
+
+  .cyara-header__icons {
+    grid-area: icons;
+    gap: 0.65rem;
+  }
+
+  .cyara-btn-icon--desktop {
+    display: none !important;
+  }
+
+  .cyara-btn-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .cyara-header__inner {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+/* ---- Promo bar ---- */
+@media (max-width: 479px) {
+  .cyara-promo__item {
+    font-size: 9px;
+    padding: 0.35rem 0.4rem;
+  }
+
+  .cyara-promo__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .cyara-promo__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cyara-promo__item {
+    font-size: 8px;
+    padding: 0.35rem 0.25rem;
+  }
+}
+
+/* ---- Navegação ---- */
+@media (max-width: 767px) {
+  .cyara-nav__list {
+    gap: 1rem;
+    padding: 0 0.75rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cyara-nav__link {
+    font-size: 12px;
+  }
+}
+
+/* ---- Hero ---- */
+.cyara-hero__mobile {
+  display: block;
+}
+
+.cyara-hero__desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .cyara-hero__mobile {
+    display: none;
+  }
+
+  .cyara-hero__desktop {
+    display: grid;
+    gap: 8px;
+    height: var(--hero-altura);
+    min-height: var(--hero-altura);
+    max-height: var(--hero-altura);
+    grid-template-columns: var(--col-banner-lateral) minmax(0, 1fr) var(--col-banner-lateral);
+    grid-template-areas: 'banners-esq carousel banners-dir';
+    align-items: stretch;
+  }
+
+  .cyara-hero__col-banners--esq {
+    grid-area: banners-esq;
+    height: 100%;
+  }
+
+  .cyara-hero__col-banners--dir {
+    grid-area: banners-dir;
+    height: 100%;
+  }
+
+  .cyara-hero__desktop .cyara-carousel {
+    grid-area: carousel;
+    height: 100%;
+    min-height: var(--hero-altura);
+    max-height: var(--hero-altura);
+  }
+
+  .cyara-hero__col-banners .cyara-banner-slot {
+    height: calc((var(--hero-altura) - 16px) / 3);
+    min-height: calc((var(--hero-altura) - 16px) / 3);
+    max-height: calc((var(--hero-altura) - 16px) / 3);
+  }
+}
+
+@media (max-width: 1023px) {
+  .cyara-hero__mobile-banners {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    align-items: start;
+  }
+
+  .cyara-hero__mobile-banners .cyara-hero__col-banners--esq {
+    grid-column: 1;
+  }
+
+  .cyara-hero__mobile-banners .cyara-hero__col-banners--dir {
+    grid-column: 2;
+  }
+
+.cyara-banner-esq--mobile {
+  min-height: 72px;
+  height: 72px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.35rem;
+}
+
+.cyara-banner-esq--mobile .cyara-banner__titulo {
+  font-size: 9px;
+  position: static;
+}
+}
+
+@media (max-width: 639px) {
+  .cyara-carousel--mobile {
+    min-height: 200px;
+  }
+
+  .cyara-carousel__content {
+    padding: 1.25rem 1rem;
+  }
+
+  .cyara-carousel__tag {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+  }
+
+  .cyara-carousel__title {
+    font-size: 1.75rem;
+  }
+
+  .cyara-carousel__subtitle {
+    font-size: 11px;
+    margin-bottom: 0.75rem;
+  }
+
+  .cyara-btn-cta {
+    font-size: 10px;
+    padding: 0.4rem 1rem;
+  }
+
+  .cyara-btn-seta {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .cyara-carousel--mobile {
+    min-height: 260px;
+  }
+
+  .cyara-carousel__title {
+    font-size: 2.25rem;
+  }
+}
+
+/* ---- Categorias ---- */
+@media (max-width: 639px) {
+  .cyara-categorias {
+    padding: 0.75rem 0 1rem;
+  }
+
+  .cyara-categorias__scroll {
+    padding: 0 0.75rem;
+    gap: 0.75rem;
+    scroll-snap-type: x mandatory;
+  }
+
+  .cyara-categoria {
+    width: 64px;
+    scroll-snap-align: start;
+  }
+
+  .cyara-categoria__circulo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .cyara-categoria__label {
+    font-size: 10px;
+  }
+
+  .cyara-btn-scroll {
+    display: none;
+  }
+}
+
+/* ---- Produtos ---- */
+@media (max-width: 359px) {
+  .cyara-produtos__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .cyara-card-produto {
+    max-width: none;
+  }
+
+  :root {
+    --img-produto-tamanho: 130px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 639px) {
+  .cyara-produtos__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+
+  .cyara-card-produto {
+    max-width: none;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .cyara-produtos__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cyara-produtos__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .cyara-produtos__grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Favorito sempre visível em touch */
+@media (hover: none) {
+  .cyara-card-produto__fav {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .cyara-card-produto:hover {
+    transform: none;
+  }
+}
+
+/* ---- Painel lateral ---- */
+@media (max-width: 479px) {
+  .cyara-painel {
+    max-width: 100%;
+  }
+
+  .cyara-painel__body {
+    padding: 0.75rem;
+  }
+}
+
+/* ---- Toast ---- */
+@media (max-width: 639px) {
+  .cyara-toast {
+    left: 1rem;
+    right: 1rem;
+    transform: none;
+    bottom: 1rem;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  @keyframes cyara-toast-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ---- Container ---- */
+@media (max-width: 639px) {
+  .cyara-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+/* ---- Login modal ---- */
+@media (max-width: 639px) {
+  .cyara-login-modal {
+    padding: 0.75rem;
+    align-items: flex-end;
+  }
+
+  .cyara-login-modal__box {
+    border-radius: 12px 12px 0 0;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}

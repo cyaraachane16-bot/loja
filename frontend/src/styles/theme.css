@@ -1,0 +1,53 @@
+/**
+ * Configuração global de estilos — CYARA LAR & ESTILO
+ * Altere estas variáveis para mudar o visual de toda a loja.
+ */
+:root {
+  /* Cores principais */
+  --cor-preto: #000000;
+  --cor-branco: #ffffff;
+  --cor-cream: #f3ede6;
+  --cor-cream-borda: #e0d8cf;
+  --cor-castanho: #5c3d2e;
+  --cor-vermelho: #c73636;
+  --cor-dourado: #9a7349;
+  --cor-cinza-claro: #f2f2f2;
+  --cor-cinza-fundo: #f6f6f6;
+  --cor-cinza-texto: #666666;
+  --cor-cinza-borda: #e5e5e5;
+  --cor-texto: #222222;
+
+  /* Gradientes banners */
+  --gradiente-banner-esq: linear-gradient(
+    90deg,
+    #4f4f4f 0%,
+    #7a736a 28%,
+    #b8b0a6 55%,
+    #e8e2d9 100%
+  );
+  --gradiente-banner-dir: linear-gradient(180deg, #c9c9c9 0%, #a8a8a8 100%);
+  --gradiente-hero: linear-gradient(
+    135deg,
+    #4a4a4a 0%,
+    #6b6b6b 40%,
+    #353535 100%
+  );
+
+  /* Tipografia */
+  --fonte-ui: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --fonte-logo: Georgia, 'Times New Roman', Times, serif;
+  --tamanho-nav: 13px;
+  --tamanho-promo: 11px;
+
+  /* Espaçamentos e layout */
+  --largura-max: 1420px;
+  --altura-header: 60px;
+  --altura-nav: 38px;
+  --raio: 4px;
+  --hero-altura: 380px;
+  --col-banner-lateral: 200px;
+
+  /* Sombras e transições */
+  --sombra-leve: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --transicao: 0.2s ease;
+}

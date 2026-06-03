@@ -1,0 +1,23 @@
+/**
+ * Tamanhos normalizados de imagens — CYARA
+ * (importado por index.css)
+ */
+:root {
+  --img-produto-tamanho: 160px;
+  --img-produto-raio: 10px;
+  --img-categoria-tamanho: 56px;
+  --img-painel-largura: 72px;
+  --img-painel-altura: 88px;
+  --img-hero-max-altura: 380px;
+  --card-produto-raio: 12px;
+  --card-produto-sombra: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --card-produto-sombra-hover: 0 10px 28px rgba(0, 0, 0, 0.1);
+}
+
+.cyara-img-produto,
+.cyara-img-categoria,
+.cyara-img-hero,
+.cyara-img-painel {
+  display: block;
+  max-width: 100%;
+}
