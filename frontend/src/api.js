@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const API_URL =
-    import.meta.env.VITE_API_URL || "https://loja-1-1wk.onrender.com";
+    import.meta.env.VITE_API_URL || "https://loja-1-1rwk.onrender.com";
 
   
 export const api = axios.create({
