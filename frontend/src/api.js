@@ -1,11 +1,13 @@
 import axios from 'axios'
 
 export const API_URL =
-  import.meta.env.VITE_API_URL || "https://loja-backend-0lsf.onrender.com"
+    import.meta.env.VITE_API_URL || "https://loja-1-1wk.onrender.com";
 
+  
 export const api = axios.create({
   baseURL: API_URL,
 })
+
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token')
